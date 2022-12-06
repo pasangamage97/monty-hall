@@ -1,0 +1,28 @@
+.Result-page {
+    margin-bottom: 2.5rem;
+}
+
+.Result-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 80vh;
+}
+
+.Result-col {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+.Result-col-2 {
+    flex: 2;
+}
+
+.Result-col-3 {
+    flex: 3;
+}

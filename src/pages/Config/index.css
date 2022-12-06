@@ -1,0 +1,15 @@
+.config-row {
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.config-row h1 {
+    padding-bottom: 1rem;
+}
+
+.action-row {
+    padding-top: 2rem;
+}

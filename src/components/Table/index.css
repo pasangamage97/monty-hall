@@ -1,0 +1,36 @@
+.table {
+  border-collapse: collapse;
+  border: 0.1rem solid black;
+  padding: 0.5rem;
+  width: 100%;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.table {
+  border-color: #999;
+}
+
+.table-row {
+  border-color: #999;
+}
+
+.table-row:hover {
+  background-color: #666;
+}
+
+.table-row-header {
+  color: white;
+  background-color: #555;
+}
+
+.table-cell {
+  color: white;
+}
+
+.row-export {
+    display: flex;
+    justify-content: start;
+    padding-bottom: 0.75rem;
+    font-size: 0.85rem;
+}

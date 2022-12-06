@@ -1,9 +1,17 @@
 .toggleButton {
-    display: flex;
-    width: 100%;
+  display: flex;
+  width: 100%;
 }
 
-.toggleButton .btn{
-    width: 100%;
-    border-radius: 0;
+.toggleButton .btn {
+  width: 100%;
+  border-radius: 0;
+}
+
+.toggleButton .btn:first-child {
+    border-radius: 2rem 0 0 2rem;
+}
+
+.toggleButton .btn:last-child {
+    border-radius: 0 2rem 2rem 0;
 }

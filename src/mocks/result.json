@@ -1,0 +1,45 @@
+{
+  "calculatedData": {
+    "winningPercentage": 66,
+    "losingPercentage": 33,
+    "numberOfSimulations": 1000,
+    "isSwitched": true
+  },
+  "rawData": [
+    {
+      "numberOfIteration": 1,
+      "doorWithTheCar": 2,
+      "choosenDoor": 1,
+      "switchedOrNot": true,
+      "result": "Won"
+    },
+    {
+      "numberOfIteration": 2,
+      "doorWithTheCar": 3,
+      "choosenDoor": 2,
+      "switchedOrNot": true,
+      "result": "Loss"
+    },
+    {
+      "numberOfIteration": 3,
+      "doorWithTheCar": 3,
+      "choosenDoor": 2,
+      "switchedOrNot": true,
+      "result": "Won"
+    },
+    {
+      "numberOfIteration": 4,
+      "doorWithTheCar": 1,
+      "choosenDoor": 1,
+      "switchedOrNot": true,
+      "result": "Loss"
+    },
+    {
+      "numberOfIteration": 5,
+      "doorWithTheCar": 2,
+      "choosenDoor": 3,
+      "switchedOrNot": true,
+      "result": "Won"
+    }
+  ]
+}

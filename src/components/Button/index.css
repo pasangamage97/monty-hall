@@ -1,15 +1,29 @@
-.btn{
-    color:#fff;
-    background-color: #0000ff;
-    padding: 0.25rem 0.5rem;
-    border-radius: 0.2rem;
-    cursor: pointer;
+.btn {
+  color: #c5fffd;
+  background-color: transparent;
+  padding: 0.25rem 1.5rem;
+  border: 1px solid #c5fffd;
+  border-radius: 2rem;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 500;
+  min-width: 6rem;
+  transition: 0.2s all linear;
 }
 
-.btn:hover{
-    background-color: #00c;
+.btn:hover,
+.btn-active {
+  background-color: #88d9e6;
+  color: #222;
 }
 
-.btn-active{
-    background-color: #f00;
+.btn-primary {
+  color: #222;
+  background-color: #ffc49b;
+  border-color: #ffc49b;
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  color: #ffc49b;
 }
