@@ -9,7 +9,7 @@ function Results() {
   const type = useMemo(() => params.get("type"), [params]);
   const rounds = useMemo(() => params.get("rounds"), [params]);
 
-  const [activeState, setActiveState] = useState(type ? "switch" : type);
+  const [activeState, setActiveState] = useState(type === "both" ? "switch" : type);
 
   return (
     <div className="Result-page">
