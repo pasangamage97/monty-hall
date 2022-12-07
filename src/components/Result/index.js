@@ -1,6 +1,4 @@
 import { Cell, Pie, PieChart, ResponsiveContainer, Tooltip } from "recharts";
-import data from "../../mocks/result.json";
-import data2 from "../../mocks/result2.json";
 import Table from "../../components/Table";
 import "./index.css";
 import { useEffect, useMemo, useState } from "react";
@@ -17,19 +15,22 @@ function Result({ type, numOfSimulations }) {
   async function submitData() {
     if (type === "keep" && resultKeep != null) return;
     if (type === "switch" && resultSwitch != null) return;
-    // const url = process.env.REACT_APP_API_BASE_URL + "/api/simulate";
-    // const body = {
-    //   type,
-    //   numOfSimulations,
-    // };
-
-    // const res = await fetch(url, {
-    //   method: "POST",
-    //   body: JSON.stringify(body),
-    // });
-    // const result = await res.json();
-    console.log("refetched!");
-    type === "keep" ? setResultkeep(data2) : setResultSwitch(data);
+    const url = process.env.REACT_APP_API_BASE_URL + "/api/RunSimulation";
+    const body = {
+      type,
+      numOfSimulations,
+    };
+    const res = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept":"text/plain"
+      },
+      body: JSON.stringify(body),
+    });
+    const result = await res.json();
+    console.log(result);
+    type === "keep" ? setResultkeep(result) : setResultSwitch(result);
   }
 
   useEffect(() => {

@@ -7,10 +7,10 @@ import { Link } from "react-router-dom";
 function Home() {
   return (
     <div className="Home-content">
-      <img src={logo} className="App-logo" alt="logo" />
+      <img src="/img-monty-hall.png" className="logo" alt="logo" />
       <h1>Welcome to <br /> Monty Hall Simulation</h1>
       <Link to="/config">
-        <Button>Press me!</Button>
+        <Button>Run Simulation</Button>
       </Link>
     </div>
   );
