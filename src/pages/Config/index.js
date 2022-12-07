@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Button from "../../components/Button";
 import "./index.css";
 import Input from "../../components/Input";
@@ -6,8 +6,13 @@ import ToggleButtonGroup from "../../components/ToggleButtonGroup";
 import { Link } from "react-router-dom";
 
 function Config() {
-  const [btnState, setBtnState] = useState(null);
+  const [btnState, setBtnState] = useState("switch");
   const [inputValue, setInputValue] = useState("100");
+  const [isInputValueValid, setIsInputValueValid] = useState(true);
+
+  useEffect(() => {
+    setIsInputValueValid(inputValue != "" && !isNaN(inputValue));
+  }, [inputValue]);
 
   return (
     <>
@@ -30,11 +35,13 @@ function Config() {
           setBtnState={setBtnState}
         />
       </div>
-      <div className="action-row">
-        <Link to={`/results?type=${btnState}&rounds=${inputValue}`}>
-          <Button primary>Run the simulation</Button>
-        </Link>
-      </div>
+      {isInputValueValid && (
+        <div className="action-row">
+          <Link to={`/results?type=${btnState}&rounds=${inputValue}`}>
+            <Button primary>Run the simulation</Button>
+          </Link>
+        </div>
+      )}
     </>
   );
 }
